@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C78F3560154F73EA00834DE2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78F355F154F73EA00834DE2 /* Cocoa.framework */; };
+		C78F356A154F73EA00834DE2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C78F3568154F73EA00834DE2 /* InfoPlist.strings */; };
+		C78F356C154F73EA00834DE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C78F356B154F73EA00834DE2 /* main.m */; };
+		C78F3570154F73EA00834DE2 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C78F356E154F73EA00834DE2 /* Credits.rtf */; };
+		C78F3573154F73EA00834DE2 /* HopShopAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C78F3572154F73EA00834DE2 /* HopShopAppDelegate.m */; };
+		C78F3576154F73EA00834DE2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C78F3574154F73EA00834DE2 /* MainMenu.xib */; };
+		C78F357E154F73EA00834DE2 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78F357D154F73EA00834DE2 /* SenTestingKit.framework */; };
+		C78F357F154F73EA00834DE2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78F355F154F73EA00834DE2 /* Cocoa.framework */; };
+		C78F3587154F73EA00834DE2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C78F3585154F73EA00834DE2 /* InfoPlist.strings */; };
+		C78F358A154F73EA00834DE2 /* HopShopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78F3589154F73EA00834DE2 /* HopShopTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C78F3580154F73EA00834DE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C78F3552154F73EA00834DE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C78F355A154F73EA00834DE2;
+			remoteInfo = HopShop;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C78F355B154F73EA00834DE2 /* HopShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HopShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C78F355F154F73EA00834DE2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C78F3562154F73EA00834DE2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		C78F3563154F73EA00834DE2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C78F3564154F73EA00834DE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C78F3567154F73EA00834DE2 /* HopShop-Info.plist */ = {isa = PBXFileReference; path = "HopShop-Info.plist"; sourceTree = "<group>"; };
+		C78F3569154F73EA00834DE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C78F356B154F73EA00834DE2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C78F356D154F73EA00834DE2 /* HopShop-Prefix.pch */ = {isa = PBXFileReference; path = "HopShop-Prefix.pch"; sourceTree = "<group>"; };
+		C78F356F154F73EA00834DE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		C78F3571154F73EA00834DE2 /* HopShopAppDelegate.h */ = {isa = PBXFileReference; path = HopShopAppDelegate.h; sourceTree = "<group>"; };
+		C78F3572154F73EA00834DE2 /* HopShopAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HopShopAppDelegate.m; sourceTree = "<group>"; };
+		C78F3575154F73EA00834DE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C78F357C154F73EA00834DE2 /* HopShopTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HopShopTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C78F357D154F73EA00834DE2 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C78F3584154F73EA00834DE2 /* HopShopTests-Info.plist */ = {isa = PBXFileReference; path = "HopShopTests-Info.plist"; sourceTree = "<group>"; };
+		C78F3586154F73EA00834DE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C78F3588154F73EA00834DE2 /* HopShopTests.h */ = {isa = PBXFileReference; path = HopShopTests.h; sourceTree = "<group>"; };
+		C78F3589154F73EA00834DE2 /* HopShopTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HopShopTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C78F3558154F73EA00834DE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C78F3560154F73EA00834DE2 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C78F3578154F73EA00834DE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C78F357E154F73EA00834DE2 /* SenTestingKit.framework in Frameworks */,
+				C78F357F154F73EA00834DE2 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C78F3550154F73EA00834DE2 = {
+			isa = PBXGroup;
+			children = (
+				C78F3565154F73EA00834DE2 /* HopShop */,
+				C78F3582154F73EA00834DE2 /* HopShopTests */,
+				C78F355E154F73EA00834DE2 /* Frameworks */,
+				C78F355C154F73EA00834DE2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C78F355C154F73EA00834DE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C78F355B154F73EA00834DE2 /* HopShop.app */,
+				C78F357C154F73EA00834DE2 /* HopShopTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C78F355E154F73EA00834DE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C78F355F154F73EA00834DE2 /* Cocoa.framework */,
+				C78F357D154F73EA00834DE2 /* SenTestingKit.framework */,
+				C78F3561154F73EA00834DE2 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C78F3561154F73EA00834DE2 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C78F3562154F73EA00834DE2 /* AppKit.framework */,
+				C78F3563154F73EA00834DE2 /* CoreData.framework */,
+				C78F3564154F73EA00834DE2 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		C78F3565154F73EA00834DE2 /* HopShop */ = {
+			isa = PBXGroup;
+			children = (
+				C78F3571154F73EA00834DE2 /* HopShopAppDelegate.h */,
+				C78F3572154F73EA00834DE2 /* HopShopAppDelegate.m */,
+				C78F3574154F73EA00834DE2 /* MainMenu.xib */,
+				C78F3566154F73EA00834DE2 /* Supporting Files */,
+			);
+			path = HopShop;
+			sourceTree = "<group>";
+		};
+		C78F3566154F73EA00834DE2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C78F3567154F73EA00834DE2 /* HopShop-Info.plist */,
+				C78F3568154F73EA00834DE2 /* InfoPlist.strings */,
+				C78F356B154F73EA00834DE2 /* main.m */,
+				C78F356D154F73EA00834DE2 /* HopShop-Prefix.pch */,
+				C78F356E154F73EA00834DE2 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C78F3582154F73EA00834DE2 /* HopShopTests */ = {
+			isa = PBXGroup;
+			children = (
+				C78F3588154F73EA00834DE2 /* HopShopTests.h */,
+				C78F3589154F73EA00834DE2 /* HopShopTests.m */,
+				C78F3583154F73EA00834DE2 /* Supporting Files */,
+			);
+			path = HopShopTests;
+			sourceTree = "<group>";
+		};
+		C78F3583154F73EA00834DE2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C78F3584154F73EA00834DE2 /* HopShopTests-Info.plist */,
+				C78F3585154F73EA00834DE2 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C78F355A154F73EA00834DE2 /* HopShop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C78F358D154F73EA00834DE2 /* Build configuration list for PBXNativeTarget "HopShop" */;
+			buildPhases = (
+				C78F3557154F73EA00834DE2 /* Sources */,
+				C78F3558154F73EA00834DE2 /* Frameworks */,
+				C78F3559154F73EA00834DE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HopShop;
+			productName = HopShop;
+			productReference = C78F355B154F73EA00834DE2 /* HopShop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C78F357B154F73EA00834DE2 /* HopShopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C78F3590154F73EA00834DE2 /* Build configuration list for PBXNativeTarget "HopShopTests" */;
+			buildPhases = (
+				C78F3577154F73EA00834DE2 /* Sources */,
+				C78F3578154F73EA00834DE2 /* Frameworks */,
+				C78F3579154F73EA00834DE2 /* Resources */,
+				C78F357A154F73EA00834DE2 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C78F3581154F73EA00834DE2 /* PBXTargetDependency */,
+			);
+			name = HopShopTests;
+			productName = HopShopTests;
+			productReference = C78F357C154F73EA00834DE2 /* HopShopTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C78F3552154F73EA00834DE2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HopShop;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = Grailbox;
+			};
+			buildConfigurationList = C78F3555154F73EA00834DE2 /* Build configuration list for PBXProject "HopShop" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C78F3550154F73EA00834DE2;
+			productRefGroup = C78F355C154F73EA00834DE2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C78F355A154F73EA00834DE2 /* HopShop */,
+				C78F357B154F73EA00834DE2 /* HopShopTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C78F3559154F73EA00834DE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C78F356A154F73EA00834DE2 /* InfoPlist.strings in Resources */,
+				C78F3570154F73EA00834DE2 /* Credits.rtf in Resources */,
+				C78F3576154F73EA00834DE2 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C78F3579154F73EA00834DE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C78F3587154F73EA00834DE2 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C78F357A154F73EA00834DE2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C78F3557154F73EA00834DE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C78F356C154F73EA00834DE2 /* main.m in Sources */,
+				C78F3573154F73EA00834DE2 /* HopShopAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C78F3577154F73EA00834DE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C78F358A154F73EA00834DE2 /* HopShopTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C78F3581154F73EA00834DE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C78F355A154F73EA00834DE2 /* HopShop */;
+			targetProxy = C78F3580154F73EA00834DE2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C78F3568154F73EA00834DE2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C78F3569154F73EA00834DE2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C78F356E154F73EA00834DE2 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C78F356F154F73EA00834DE2 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		C78F3574154F73EA00834DE2 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C78F3575154F73EA00834DE2 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		C78F3585154F73EA00834DE2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C78F3586154F73EA00834DE2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C78F358B154F73EA00834DE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C78F358C154F73EA00834DE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C78F358E154F73EA00834DE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HopShop/HopShop-Prefix.pch";
+				INFOPLIST_FILE = "HopShop/HopShop-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C78F358F154F73EA00834DE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HopShop/HopShop-Prefix.pch";
+				INFOPLIST_FILE = "HopShop/HopShop-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C78F3591154F73EA00834DE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HopShop.app/Contents/MacOS/HopShop";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HopShop/HopShop-Prefix.pch";
+				INFOPLIST_FILE = "HopShopTests/HopShopTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C78F3592154F73EA00834DE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HopShop.app/Contents/MacOS/HopShop";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HopShop/HopShop-Prefix.pch";
+				INFOPLIST_FILE = "HopShopTests/HopShopTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C78F3555154F73EA00834DE2 /* Build configuration list for PBXProject "HopShop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C78F358B154F73EA00834DE2 /* Debug */,
+				C78F358C154F73EA00834DE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C78F358D154F73EA00834DE2 /* Build configuration list for PBXNativeTarget "HopShop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C78F358E154F73EA00834DE2 /* Debug */,
+				C78F358F154F73EA00834DE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C78F3590154F73EA00834DE2 /* Build configuration list for PBXNativeTarget "HopShopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C78F3591154F73EA00834DE2 /* Debug */,
+				C78F3592154F73EA00834DE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C78F3552154F73EA00834DE2 /* Project object */;
+}
