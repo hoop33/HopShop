@@ -17,6 +17,7 @@
 		C78F357F154F73EA00834DE2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78F355F154F73EA00834DE2 /* Cocoa.framework */; };
 		C78F3587154F73EA00834DE2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C78F3585154F73EA00834DE2 /* InfoPlist.strings */; };
 		C78F358A154F73EA00834DE2 /* HopShopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78F3589154F73EA00834DE2 /* HopShopTests.m */; };
+		C78F359C1550767800834DE2 /* HopShopAppDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78F359B1550767800834DE2 /* HopShopAppDelegateTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,20 +36,22 @@
 		C78F3562154F73EA00834DE2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		C78F3563154F73EA00834DE2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		C78F3564154F73EA00834DE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		C78F3567154F73EA00834DE2 /* HopShop-Info.plist */ = {isa = PBXFileReference; path = "HopShop-Info.plist"; sourceTree = "<group>"; };
+		C78F3567154F73EA00834DE2 /* HopShop-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HopShop-Info.plist"; sourceTree = "<group>"; };
 		C78F3569154F73EA00834DE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C78F356B154F73EA00834DE2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C78F356D154F73EA00834DE2 /* HopShop-Prefix.pch */ = {isa = PBXFileReference; path = "HopShop-Prefix.pch"; sourceTree = "<group>"; };
+		C78F356D154F73EA00834DE2 /* HopShop-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HopShop-Prefix.pch"; sourceTree = "<group>"; };
 		C78F356F154F73EA00834DE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		C78F3571154F73EA00834DE2 /* HopShopAppDelegate.h */ = {isa = PBXFileReference; path = HopShopAppDelegate.h; sourceTree = "<group>"; };
+		C78F3571154F73EA00834DE2 /* HopShopAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HopShopAppDelegate.h; sourceTree = "<group>"; };
 		C78F3572154F73EA00834DE2 /* HopShopAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HopShopAppDelegate.m; sourceTree = "<group>"; };
 		C78F3575154F73EA00834DE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		C78F357C154F73EA00834DE2 /* HopShopTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HopShopTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C78F357D154F73EA00834DE2 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		C78F3584154F73EA00834DE2 /* HopShopTests-Info.plist */ = {isa = PBXFileReference; path = "HopShopTests-Info.plist"; sourceTree = "<group>"; };
+		C78F3584154F73EA00834DE2 /* HopShopTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HopShopTests-Info.plist"; sourceTree = "<group>"; };
 		C78F3586154F73EA00834DE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C78F3588154F73EA00834DE2 /* HopShopTests.h */ = {isa = PBXFileReference; path = HopShopTests.h; sourceTree = "<group>"; };
+		C78F3588154F73EA00834DE2 /* HopShopTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HopShopTests.h; sourceTree = "<group>"; };
 		C78F3589154F73EA00834DE2 /* HopShopTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HopShopTests.m; sourceTree = "<group>"; };
+		C78F359A1550767800834DE2 /* HopShopAppDelegateTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HopShopAppDelegateTests.h; sourceTree = "<group>"; };
+		C78F359B1550767800834DE2 /* HopShopAppDelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HopShopAppDelegateTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +143,8 @@
 				C78F3588154F73EA00834DE2 /* HopShopTests.h */,
 				C78F3589154F73EA00834DE2 /* HopShopTests.m */,
 				C78F3583154F73EA00834DE2 /* Supporting Files */,
+				C78F359A1550767800834DE2 /* HopShopAppDelegateTests.h */,
+				C78F359B1550767800834DE2 /* HopShopAppDelegateTests.m */,
 			);
 			path = HopShopTests;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C78F358A154F73EA00834DE2 /* HopShopTests.m in Sources */,
+				C78F359C1550767800834DE2 /* HopShopAppDelegateTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +380,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HopShop/HopShop-Prefix.pch";
 				INFOPLIST_FILE = "HopShop/HopShop-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -385,6 +392,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HopShop/HopShop-Prefix.pch";
 				INFOPLIST_FILE = "HopShop/HopShop-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

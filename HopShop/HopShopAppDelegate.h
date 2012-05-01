@@ -12,4 +12,9 @@
 
 @property (assign) IBOutlet NSWindow *window;
 
++ (HopShopAppDelegate *)delegate;
+
+- (void)showError:(NSString *)errorMessage;
+- (NSString *)pathForAppData;
+
 @end
