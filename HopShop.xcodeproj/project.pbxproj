@@ -10,6 +10,7 @@
 		C74875C4155480C600253576 /* TaskWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = C78F359E1550A8BC00834DE2 /* TaskWrapper.m */; };
 		C74875C71554862A00253576 /* InstalledFormulaeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C74875C61554862A00253576 /* InstalledFormulaeViewController.m */; };
 		C74875CB1555188E00253576 /* AvailableFormulaeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C74875CA1555188E00253576 /* AvailableFormulaeViewController.m */; };
+		C74875CE1555236600253576 /* OutputWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C74875CD1555236600253576 /* OutputWindowViewController.m */; };
 		C78F3560154F73EA00834DE2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78F355F154F73EA00834DE2 /* Cocoa.framework */; };
 		C78F356A154F73EA00834DE2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C78F3568154F73EA00834DE2 /* InfoPlist.strings */; };
 		C78F356C154F73EA00834DE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C78F356B154F73EA00834DE2 /* main.m */; };
@@ -40,6 +41,8 @@
 		C74875C61554862A00253576 /* InstalledFormulaeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstalledFormulaeViewController.m; sourceTree = "<group>"; };
 		C74875C91555188E00253576 /* AvailableFormulaeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvailableFormulaeViewController.h; sourceTree = "<group>"; };
 		C74875CA1555188E00253576 /* AvailableFormulaeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvailableFormulaeViewController.m; sourceTree = "<group>"; };
+		C74875CC1555236600253576 /* OutputWindowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutputWindowViewController.h; sourceTree = "<group>"; };
+		C74875CD1555236600253576 /* OutputWindowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutputWindowViewController.m; sourceTree = "<group>"; };
 		C78F355B154F73EA00834DE2 /* HopShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HopShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C78F355F154F73EA00834DE2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C78F3562154F73EA00834DE2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -97,6 +100,8 @@
 				C74875C61554862A00253576 /* InstalledFormulaeViewController.m */,
 				C74875C91555188E00253576 /* AvailableFormulaeViewController.h */,
 				C74875CA1555188E00253576 /* AvailableFormulaeViewController.m */,
+				C74875CC1555236600253576 /* OutputWindowViewController.h */,
+				C74875CD1555236600253576 /* OutputWindowViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -322,6 +327,7 @@
 				C74875C4155480C600253576 /* TaskWrapper.m in Sources */,
 				C74875C71554862A00253576 /* InstalledFormulaeViewController.m in Sources */,
 				C74875CB1555188E00253576 /* AvailableFormulaeViewController.m in Sources */,
+				C74875CE1555236600253576 /* OutputWindowViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

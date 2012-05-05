@@ -8,13 +8,18 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class OutputWindowViewController;
+
 @interface HopShopAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (assign) IBOutlet OutputWindowViewController *outputWindowViewController;
 
 + (HopShopAppDelegate *)delegate;
 
 - (void)showError:(NSString *)errorMessage;
 - (NSString *)pathForAppData;
+- (void)clearOutput;
+- (void)appendToOutput:(NSString *)text;
 
 @end

@@ -47,6 +47,8 @@ NSPredicate *formulaePredicate;
   [brew search:nil];
 }
 
+#pragma mark - BrewDelegate methods
+
 - (void)searchDidComplete:(NSArray *)formulae
 {
   [availableFormulae removeAllObjects];
@@ -56,6 +58,15 @@ NSPredicate *formulaePredicate;
   [availableFormulae writeToFile:[[[HopShopAppDelegate delegate] pathForAppData] stringByAppendingPathComponent:kAvailableFormulaeFile] atomically:YES];
   [self.tableView reloadData];
 }
+
+- (void)infoDidComplete:(NSString *)output
+{
+  HopShopAppDelegate *appDelegate = [HopShopAppDelegate delegate];
+  [appDelegate clearOutput];
+  [appDelegate appendToOutput:output];
+}
+
+#pragma mark - Action methods
 
 - (IBAction)updateFilter:(id)sender {
   NSString *searchString = [searchField stringValue];
@@ -67,5 +78,22 @@ NSPredicate *formulaePredicate;
   }
   [arrayController setFilterPredicate:predicate];
 }
+
+#pragma mark - NSTableViewDelegate methods
+
+- (void)tableViewSelectionDidChange:(NSNotification *)notification 
+{
+  NSArray *selectedFormulae = [arrayController selectedObjects];
+  if (selectedFormulae.count > 0) 
+  {
+    NSMutableArray *formulae = [NSMutableArray arrayWithCapacity:selectedFormulae.count];
+    for (NSDictionary *dictionary in selectedFormulae)
+    {
+      [formulae addObject:[dictionary objectForKey:@"name"]];
+    }
+    [brew info:formulae];
+  }
+}
+
 
 @end

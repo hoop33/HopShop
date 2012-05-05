@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "Brew.h"
 
-@interface AvailableFormulaeViewController : NSViewController<BrewDelegate>
+@interface AvailableFormulaeViewController : NSViewController<BrewDelegate, NSTableViewDelegate>
 
 @property (strong) IBOutlet NSTableView *tableView;
 @property (strong) IBOutlet NSArrayController *arrayController;

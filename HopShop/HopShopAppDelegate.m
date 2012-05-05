@@ -7,10 +7,12 @@
 //
 
 #import "HopShopAppDelegate.h"
+#import "OutputWindowViewController.h"
 
 @implementation HopShopAppDelegate
 
 @synthesize window = _window;
+@synthesize outputWindowViewController = _outputWindowViewController;
 
 + (HopShopAppDelegate *)delegate
 {
@@ -39,6 +41,22 @@
 
 - (void)showError:(NSString *)errorMessage {
   
+}
+
+- (void)clearOutput 
+{
+  if (self.outputWindowViewController != nil)
+  {
+    [self.outputWindowViewController clear];
+  }
+}
+
+- (void)appendToOutput:(NSString *)text
+{
+  if (self.outputWindowViewController != nil)
+  {
+    [self.outputWindowViewController append:text];
+  }
 }
 
 @end

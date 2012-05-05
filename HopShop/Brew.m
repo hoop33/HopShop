@@ -85,7 +85,7 @@ static NSDictionary *operations;
 
 - (void)info:(NSArray *)formulae
 {
-  
+  [self runTask:BrewOperationInfo arguments:formulae];
 }
 
 - (void)outdated
@@ -151,7 +151,12 @@ static NSDictionary *operations;
         [self.delegate searchDidComplete:[NSArray arrayWithArray:array]];
       }
       break;
-      
+    case BrewOperationInfo:
+      if (self.delegate != nil && [self.delegate respondsToSelector:@selector(infoDidComplete:)])
+      {
+        [self.delegate infoDidComplete:currentOutput];
+      }
+      break;
     default:
       break;
   }
