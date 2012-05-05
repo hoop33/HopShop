@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C74875C4155480C600253576 /* TaskWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = C78F359E1550A8BC00834DE2 /* TaskWrapper.m */; };
+		C74875C71554862A00253576 /* InstalledFormulaeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C74875C61554862A00253576 /* InstalledFormulaeViewController.m */; };
+		C74875CB1555188E00253576 /* AvailableFormulaeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C74875CA1555188E00253576 /* AvailableFormulaeViewController.m */; };
 		C78F3560154F73EA00834DE2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78F355F154F73EA00834DE2 /* Cocoa.framework */; };
 		C78F356A154F73EA00834DE2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C78F3568154F73EA00834DE2 /* InfoPlist.strings */; };
 		C78F356C154F73EA00834DE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C78F356B154F73EA00834DE2 /* main.m */; };
@@ -18,6 +21,8 @@
 		C78F3587154F73EA00834DE2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C78F3585154F73EA00834DE2 /* InfoPlist.strings */; };
 		C78F358A154F73EA00834DE2 /* HopShopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78F3589154F73EA00834DE2 /* HopShopTests.m */; };
 		C78F359C1550767800834DE2 /* HopShopAppDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78F359B1550767800834DE2 /* HopShopAppDelegateTests.m */; };
+		C78F35A41550A96C00834DE2 /* Brew.m in Sources */ = {isa = PBXBuildFile; fileRef = C78F35A31550A96C00834DE2 /* Brew.m */; };
+		C78F35A81550A9DE00834DE2 /* BrewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78F35A71550A9DE00834DE2 /* BrewTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C74875C51554862A00253576 /* InstalledFormulaeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstalledFormulaeViewController.h; sourceTree = "<group>"; };
+		C74875C61554862A00253576 /* InstalledFormulaeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstalledFormulaeViewController.m; sourceTree = "<group>"; };
+		C74875C91555188E00253576 /* AvailableFormulaeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvailableFormulaeViewController.h; sourceTree = "<group>"; };
+		C74875CA1555188E00253576 /* AvailableFormulaeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvailableFormulaeViewController.m; sourceTree = "<group>"; };
 		C78F355B154F73EA00834DE2 /* HopShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HopShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C78F355F154F73EA00834DE2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C78F3562154F73EA00834DE2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -52,6 +61,12 @@
 		C78F3589154F73EA00834DE2 /* HopShopTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HopShopTests.m; sourceTree = "<group>"; };
 		C78F359A1550767800834DE2 /* HopShopAppDelegateTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HopShopAppDelegateTests.h; sourceTree = "<group>"; };
 		C78F359B1550767800834DE2 /* HopShopAppDelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HopShopAppDelegateTests.m; sourceTree = "<group>"; };
+		C78F359D1550A8BC00834DE2 /* TaskWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskWrapper.h; sourceTree = "<group>"; };
+		C78F359E1550A8BC00834DE2 /* TaskWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskWrapper.m; sourceTree = "<group>"; };
+		C78F35A21550A96C00834DE2 /* Brew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Brew.h; sourceTree = "<group>"; };
+		C78F35A31550A96C00834DE2 /* Brew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Brew.m; sourceTree = "<group>"; };
+		C78F35A61550A9DE00834DE2 /* BrewTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrewTests.h; sourceTree = "<group>"; };
+		C78F35A71550A9DE00834DE2 /* BrewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrewTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +90,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C74875C81554863C00253576 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C74875C51554862A00253576 /* InstalledFormulaeViewController.h */,
+				C74875C61554862A00253576 /* InstalledFormulaeViewController.m */,
+				C74875C91555188E00253576 /* AvailableFormulaeViewController.h */,
+				C74875CA1555188E00253576 /* AvailableFormulaeViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		C78F3550154F73EA00834DE2 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +143,8 @@
 		C78F3565154F73EA00834DE2 /* HopShop */ = {
 			isa = PBXGroup;
 			children = (
+				C74875C81554863C00253576 /* ViewControllers */,
+				C78F35A11550A8DF00834DE2 /* Services */,
 				C78F3571154F73EA00834DE2 /* HopShopAppDelegate.h */,
 				C78F3572154F73EA00834DE2 /* HopShopAppDelegate.m */,
 				C78F3574154F73EA00834DE2 /* MainMenu.xib */,
@@ -145,6 +173,7 @@
 				C78F3583154F73EA00834DE2 /* Supporting Files */,
 				C78F359A1550767800834DE2 /* HopShopAppDelegateTests.h */,
 				C78F359B1550767800834DE2 /* HopShopAppDelegateTests.m */,
+				C78F35A91550A9E300834DE2 /* Services */,
 			);
 			path = HopShopTests;
 			sourceTree = "<group>";
@@ -156,6 +185,26 @@
 				C78F3585154F73EA00834DE2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C78F35A11550A8DF00834DE2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C78F35A21550A96C00834DE2 /* Brew.h */,
+				C78F35A31550A96C00834DE2 /* Brew.m */,
+				C78F359D1550A8BC00834DE2 /* TaskWrapper.h */,
+				C78F359E1550A8BC00834DE2 /* TaskWrapper.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		C78F35A91550A9E300834DE2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C78F35A61550A9DE00834DE2 /* BrewTests.h */,
+				C78F35A71550A9DE00834DE2 /* BrewTests.m */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +318,10 @@
 			files = (
 				C78F356C154F73EA00834DE2 /* main.m in Sources */,
 				C78F3573154F73EA00834DE2 /* HopShopAppDelegate.m in Sources */,
+				C78F35A41550A96C00834DE2 /* Brew.m in Sources */,
+				C74875C4155480C600253576 /* TaskWrapper.m in Sources */,
+				C74875C71554862A00253576 /* InstalledFormulaeViewController.m in Sources */,
+				C74875CB1555188E00253576 /* AvailableFormulaeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +331,7 @@
 			files = (
 				C78F358A154F73EA00834DE2 /* HopShopTests.m in Sources */,
 				C78F359C1550767800834DE2 /* HopShopAppDelegateTests.m in Sources */,
+				C78F35A81550A9DE00834DE2 /* BrewTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +499,7 @@
 				C78F358F154F73EA00834DE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C78F3590154F73EA00834DE2 /* Build configuration list for PBXNativeTarget "HopShopTests" */ = {
 			isa = XCConfigurationList;
@@ -453,6 +508,7 @@
 				C78F3592154F73EA00834DE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
