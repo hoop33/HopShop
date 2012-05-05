@@ -50,9 +50,11 @@ NSPredicate *formulaePredicate;
 - (void)searchDidComplete:(NSArray *)formulae
 {
   [availableFormulae removeAllObjects];
+  NSMutableArray *tempArray = [NSMutableArray arrayWithCapacity:formulae.count];
   for (id formula in formulae) {
-    [arrayController addObject:[NSDictionary dictionaryWithObject:formula forKey:@"name"]];
+    [tempArray addObject:[NSDictionary dictionaryWithObject:formula forKey:@"name"]];
   }
+  [arrayController addObjects:tempArray];
   [[arrayController arrangedObjects] writeToFile:[[[HopShopAppDelegate delegate] pathForAppData] stringByAppendingPathComponent:kAvailableFormulaeFile] atomically:YES];
 }
 
