@@ -23,8 +23,11 @@
 
 - (void)append:(NSString *)text
 {
-  NSString *output = [self.outputView string];
-  [self.outputView setString:[output stringByAppendingString:text]];
+  if (text != nil)
+  {
+    NSString *output = [self.outputView string];
+    [self.outputView setString:[output stringByAppendingString:text]];
+  }
 }
 
 @end
