@@ -24,6 +24,7 @@
 		C78F359C1550767800834DE2 /* HopShopAppDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78F359B1550767800834DE2 /* HopShopAppDelegateTests.m */; };
 		C78F35A41550A96C00834DE2 /* Brew.m in Sources */ = {isa = PBXBuildFile; fileRef = C78F35A31550A96C00834DE2 /* Brew.m */; };
 		C78F35A81550A9DE00834DE2 /* BrewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78F35A71550A9DE00834DE2 /* BrewTests.m */; };
+		C7D39EC61555D09500D603A7 /* Formula.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D39EC51555D09500D603A7 /* Formula.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		C78F35A31550A96C00834DE2 /* Brew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Brew.m; sourceTree = "<group>"; };
 		C78F35A61550A9DE00834DE2 /* BrewTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrewTests.h; sourceTree = "<group>"; };
 		C78F35A71550A9DE00834DE2 /* BrewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrewTests.m; sourceTree = "<group>"; };
+		C7D39EC41555D09500D603A7 /* Formula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Formula.h; sourceTree = "<group>"; };
+		C7D39EC51555D09500D603A7 /* Formula.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Formula.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +157,8 @@
 				C78F3572154F73EA00834DE2 /* HopShopAppDelegate.m */,
 				C78F3574154F73EA00834DE2 /* MainMenu.xib */,
 				C78F3566154F73EA00834DE2 /* Supporting Files */,
+				C7D39EC41555D09500D603A7 /* Formula.h */,
+				C7D39EC51555D09500D603A7 /* Formula.m */,
 			);
 			path = HopShop;
 			sourceTree = "<group>";
@@ -328,6 +333,7 @@
 				C74875C71554862A00253576 /* InstalledFormulaeViewController.m in Sources */,
 				C74875CB1555188E00253576 /* AvailableFormulaeViewController.m in Sources */,
 				C74875CE1555236600253576 /* OutputWindowViewController.m in Sources */,
+				C7D39EC61555D09500D603A7 /* Formula.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

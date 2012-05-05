@@ -11,11 +11,11 @@ HopShop will eventually be a full GUI front end for HomeBrew, which also must be
 
 Not a lot is set in stone. I don't know if there should be a toolbar, or the little +/- buttons to add and remove formulae. Some things I plan to add:
 
-* Version numbers for installed formulae (parsed from brew info?) -- probably as a second table column
 * Indication of which formulae are installed in the Available Formulae list (not display them in list? Display them but with a green checkmark? Not sure)
 * sudo support for those who need it
 * Colorful info panel that's easier to read (formula name in bold, Caveats highlighted, blank lines between multiple selections, etc)
 * Maybe search for installed formulae as well--not sure how necessary that is
+* Install/uninstall/update/upgrade
 * A cool icon. Definitely.
 
 ## Contributing
