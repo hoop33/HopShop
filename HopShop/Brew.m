@@ -65,22 +65,22 @@ static NSDictionary *operations;
 
 - (void)install:(NSArray *)formulae
 {
-  
+  [self runTask:BrewOperationInstall arguments:formulae];
 }
 
 - (void)uninstall:(NSArray *)formulae
 {
-  
+  [self runTask:BrewOperationUninstall arguments:formulae];
 }
 
 - (void)update
 {
-  
+  [self runTask:BrewOperationUpdate arguments:nil];
 }
 
 - (void)upgrade:(NSArray *)formulae
 {
-  
+  [self runTask:BrewOperationUpgrade arguments:formulae];
 }
 
 - (void)info:(NSArray *)formulae
@@ -90,7 +90,7 @@ static NSDictionary *operations;
 
 - (void)outdated
 {
-  
+  [self runTask:BrewOperationOutdated arguments:nil];
 }
 
 #pragma mark - Helper methods
