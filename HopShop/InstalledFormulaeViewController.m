@@ -7,6 +7,7 @@
 //
 
 #import "InstalledFormulaeViewController.h"
+#import "HopShopAppDelegate.h"
 
 @interface InstalledFormulaeViewController ()
 - (void)updateInstalledFormulae;
@@ -17,28 +18,51 @@
 @synthesize tableView;
 @synthesize arrayController;
 @synthesize installedFormulae;
-@synthesize brew;
 
 - (void)awakeFromNib
 {
   self.installedFormulae = [NSMutableArray array];
-  self.brew = [[Brew alloc] initWithDelegate:self];
   [self updateInstalledFormulae];
 }
 
 - (void)updateInstalledFormulae
 {
+  Brew *brew = [[Brew alloc] initWithDelegate:self];
   [brew list:nil];
 }
+
+#pragma mark - BrewDelegate methods
 
 - (void)listDidComplete:(NSArray *)formulae
 {
   [installedFormulae removeAllObjects];
   for (id formula in formulae) {
-    [installedFormulae addObject:[NSDictionary dictionaryWithObject:formula forKey:@"name"]];
+    [arrayController addObject:[NSDictionary dictionaryWithObject:[formula copy] forKey:@"name"]];
   }
-  NSLog(@"%@", installedFormulae);
-  [self.tableView reloadData];
+}
+
+- (void)infoDidComplete:(NSString *)output
+{
+  HopShopAppDelegate *appDelegate = [HopShopAppDelegate delegate];
+  [appDelegate clearOutput];
+  [appDelegate appendToOutput:output];
+}
+
+#pragma mark - NSTableViewDelegate methods
+
+- (void)tableViewSelectionDidChange:(NSNotification *)notification 
+{
+  NSArray *selectedFormulae = [arrayController selectedObjects];
+  if (selectedFormulae.count > 0) 
+  {
+    NSMutableArray *formulae = [NSMutableArray arrayWithCapacity:selectedFormulae.count];
+    for (NSDictionary *dictionary in selectedFormulae)
+    {
+      [formulae addObject:[dictionary objectForKey:@"name"]];
+    }
+    Brew *brew = [[Brew alloc] initWithDelegate:self];
+    [brew info:formulae];
+  }
 }
 
 @end

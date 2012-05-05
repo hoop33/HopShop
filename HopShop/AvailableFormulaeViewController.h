@@ -15,7 +15,6 @@
 @property (strong) IBOutlet NSArrayController *arrayController;
 @property (strong) IBOutlet NSSearchField *searchField;
 @property (strong) NSMutableArray *availableFormulae;
-@property (strong) Brew *brew;
 
 - (IBAction)updateFilter:(id)sender;
 

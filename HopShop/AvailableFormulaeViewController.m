@@ -21,7 +21,6 @@
 @synthesize arrayController;
 @synthesize searchField;
 @synthesize availableFormulae;
-@synthesize brew;
 
 NSPredicate *formulaePredicate;
 
@@ -34,16 +33,15 @@ NSPredicate *formulaePredicate;
   HopShopAppDelegate *delegate = [HopShopAppDelegate delegate];
   self.availableFormulae = [[NSMutableArray alloc] initWithContentsOfFile:[[delegate pathForAppData] stringByAppendingPathComponent:kAvailableFormulaeFile]];
   if (availableFormulae == nil) {
-    self.availableFormulae = [[NSMutableArray alloc] init];
+    self.availableFormulae = [NSMutableArray array];
   }
-
-  self.brew = [[Brew alloc] initWithDelegate:self];
 
   [self updateAvailableFormulae];
 }
 
 - (void)updateAvailableFormulae
 {
+  Brew *brew = [[Brew alloc] initWithDelegate:self];
   [brew search:nil];
 }
 
@@ -53,10 +51,9 @@ NSPredicate *formulaePredicate;
 {
   [availableFormulae removeAllObjects];
   for (id formula in formulae) {
-    [availableFormulae addObject:[NSDictionary dictionaryWithObject:formula forKey:@"name"]];
+    [arrayController addObject:[NSDictionary dictionaryWithObject:formula forKey:@"name"]];
   }
-  [availableFormulae writeToFile:[[[HopShopAppDelegate delegate] pathForAppData] stringByAppendingPathComponent:kAvailableFormulaeFile] atomically:YES];
-  [self.tableView reloadData];
+  [[arrayController arrangedObjects] writeToFile:[[[HopShopAppDelegate delegate] pathForAppData] stringByAppendingPathComponent:kAvailableFormulaeFile] atomically:YES];
 }
 
 - (void)infoDidComplete:(NSString *)output
@@ -91,9 +88,9 @@ NSPredicate *formulaePredicate;
     {
       [formulae addObject:[dictionary objectForKey:@"name"]];
     }
+    Brew *brew = [[Brew alloc] initWithDelegate:self];
     [brew info:formulae];
   }
 }
-
 
 @end
