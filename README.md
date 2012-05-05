@@ -1,10 +1,10 @@
 # HopShop
-HopShop is a GUI client for [HomeBrew][hb]. It's in early alpha stage. Right now, it shows available formulae and installed formulae only.
+HopShop is a GUI client for [Homebrew][hb]. It's in early alpha stage. Right now, it shows available formulae and installed formulae only.
 
 It's written in Objective-C and is compiled for Snow Leopard or later. It eventually might get bumped up to Lion-only, but not before my work Mac is upgraded to Lion (or Mountain Lion).
 
 ## Origin
-HopShop was inspired by and forked from [Vincent Saluzzo's][vs] [HomeBrew-GUI][hbg].
+HopShop was inspired by and forked from [Vincent Saluzzo's][vs] [Homebrew-GUI][hbg].
 
 ## Roadmap
 HopShop will eventually be a full GUI front end for HomeBrew, which also must be installed on your system.
