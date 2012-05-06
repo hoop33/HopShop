@@ -8,6 +8,7 @@
 
 #import "AvailableFormulaeViewController.h"
 #import "HopShopAppDelegate.h"
+#import "Formula.h"
 
 #define kAvailableFormulaeFile @"available_formulae.plist"
 
@@ -28,14 +29,14 @@ NSPredicate *formulaePredicate;
 {
   // Set up search
   formulaePredicate = [NSPredicate predicateWithFormat:@"name beginswith[cd] $searchString"];
-
+  
   // Read in stored list
   HopShopAppDelegate *delegate = [HopShopAppDelegate delegate];
   self.availableFormulae = [[NSMutableArray alloc] initWithContentsOfFile:[[delegate pathForAppData] stringByAppendingPathComponent:kAvailableFormulaeFile]];
   if (availableFormulae == nil) {
     self.availableFormulae = [NSMutableArray array];
   }
-
+  
   [self updateAvailableFormulae];
 }
 
@@ -51,8 +52,9 @@ NSPredicate *formulaePredicate;
 {
   [availableFormulae removeAllObjects];
   NSMutableArray *tempArray = [NSMutableArray arrayWithCapacity:formulae.count];
-  for (id formula in formulae) {
-    [tempArray addObject:[NSDictionary dictionaryWithObject:formula forKey:@"name"]];
+  for (id formulaName in formulae) {
+    Formula *formula = [[Formula alloc] initWithName:formulaName];
+    [tempArray addObject:formula];
   }
   [arrayController addObjects:tempArray];
   [[arrayController arrangedObjects] writeToFile:[[[HopShopAppDelegate delegate] pathForAppData] stringByAppendingPathComponent:kAvailableFormulaeFile] atomically:YES];
@@ -82,16 +84,17 @@ NSPredicate *formulaePredicate;
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification 
 {
+  HopShopAppDelegate *appDelegate = [HopShopAppDelegate delegate];
+  [appDelegate clearOutput];
   NSArray *selectedFormulae = [arrayController selectedObjects];
   if (selectedFormulae.count > 0) 
   {
-    NSMutableArray *formulae = [NSMutableArray arrayWithCapacity:selectedFormulae.count];
-    for (NSDictionary *dictionary in selectedFormulae)
+    for (Formula *formula in selectedFormulae)
     {
-      [formulae addObject:[dictionary objectForKey:@"name"]];
+      [appDelegate appendToOutput:[NSString stringWithFormat:@"%@ %@\n", formula.name, formula.version]];
+      [appDelegate appendToOutput:formula.info];
+      [appDelegate appendToOutput:@"\n"]; 
     }
-    Brew *brew = [[Brew alloc] initWithDelegate:self];
-    [brew info:formulae];
   }
 }
 
