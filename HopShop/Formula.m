@@ -8,13 +8,23 @@
 
 #import "Formula.h"
 
+@interface Formula (private)
+- (void)loadBrewInfo;
+@end
+
 @implementation Formula
 
-@synthesize name;
-@synthesize version;
-@synthesize info;
-@synthesize installed;
-@synthesize outdated;
+@synthesize name = _name;
+@synthesize version = _version;
+@synthesize info = _info;
+@synthesize installed = _installed;
+@synthesize outdated = _outdated;
+
+static NSString *KeyName = @"name";
+static NSString *KeyVersion = @"version";
+static NSString *KeyInfo = @"info";
+static NSString *KeyInstalled = @"installed";
+static NSString *KeyOutdated = @"outdated";
 
 - (id)initWithName:(NSString *)name_
 {
@@ -22,10 +32,38 @@
   if (self != nil)
   {
     self.name = name_;
-    Brew *brew = [[Brew alloc] initWithDelegate:self];
-    [brew info:[NSArray arrayWithObject:self.name]];
+    [self loadBrewInfo];
   }
   return self;
+}
+
+- (id)initWithCoder:(NSCoder *)decoder 
+{
+  self = [super init];
+  if (self != nil) 
+  {
+    self.name = [decoder decodeObjectForKey:KeyName];
+    self.version = [decoder decodeObjectForKey:KeyVersion];
+    self.info = [decoder decodeObjectForKey:KeyInfo];
+    self.installed = [[decoder decodeObjectForKey:KeyInstalled] boolValue];
+    self.outdated = [[decoder decodeObjectForKey:KeyOutdated] boolValue];
+  }
+  return self;
+}   
+
+- (void)encodeWithCoder:(NSCoder *)encoder 
+{
+  [encoder encodeObject:self.name forKey:KeyName];
+  [encoder encodeObject:self.version forKey:KeyVersion];
+  [encoder encodeObject:self.info forKey:KeyInfo];
+  [encoder encodeObject:[NSNumber numberWithBool:self.installed] forKey:KeyInstalled];
+  [encoder encodeObject:[NSNumber numberWithBool:self.outdated] forKey:KeyOutdated];
+}
+
+- (void)loadBrewInfo
+{
+  Brew *brew = [[Brew alloc] initWithDelegate:self];
+  [brew info:[NSArray arrayWithObject:self.name]];
 }
 
 #pragma mark - BrewDelegate methods
@@ -42,5 +80,6 @@
     }
   }
 }
+
 
 @end
