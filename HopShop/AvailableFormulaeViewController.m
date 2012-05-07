@@ -31,12 +31,14 @@ NSPredicate *formulaePredicate;
   formulaePredicate = [NSPredicate predicateWithFormat:@"name beginswith[cd] $searchString"];
   
   // Read in stored list
-  HopShopAppDelegate *delegate = [HopShopAppDelegate delegate];
-  self.availableFormulae = [[NSMutableArray alloc] initWithContentsOfFile:[[delegate pathForAppData] stringByAppendingPathComponent:kAvailableFormulaeFile]];
+  NSData *formulaeData = [[NSData alloc] initWithContentsOfFile:[[[HopShopAppDelegate delegate] pathForAppData] stringByAppendingPathComponent:kAvailableFormulaeFile]];
+  if (formulaeData != nil)
+  {
+    self.availableFormulae = [NSMutableArray arrayWithArray:[NSKeyedUnarchiver unarchiveObjectWithData:formulaeData]];
+  }
   if (availableFormulae == nil) {
     self.availableFormulae = [NSMutableArray array];
   }
-  
   [self updateAvailableFormulae];
 }
 
@@ -57,14 +59,9 @@ NSPredicate *formulaePredicate;
     [tempArray addObject:formula];
   }
   [arrayController addObjects:tempArray];
-  [[arrayController arrangedObjects] writeToFile:[[[HopShopAppDelegate delegate] pathForAppData] stringByAppendingPathComponent:kAvailableFormulaeFile] atomically:YES];
-}
-
-- (void)infoDidComplete:(NSString *)output
-{
-  HopShopAppDelegate *appDelegate = [HopShopAppDelegate delegate];
-  [appDelegate clearOutput];
-  [appDelegate appendToOutput:output];
+  NSData *formulaeData = [NSKeyedArchiver archivedDataWithRootObject:[arrayController arrangedObjects]];
+  [formulaeData writeToFile:[[[HopShopAppDelegate delegate] pathForAppData] stringByAppendingPathComponent:kAvailableFormulaeFile] atomically:YES];
+  [self.tableView deselectAll:self];
 }
 
 #pragma mark - Action methods
