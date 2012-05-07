@@ -44,6 +44,7 @@
     [tempArray addObject:formula];
   }
   [arrayController addObjects:tempArray];
+  [self.tableView deselectAll:self];
 }
 
 #pragma mark - NSTableViewDelegate methods
