@@ -1,5 +1,5 @@
 # HopShop
-HopShop is a GUI client for [Homebrew][hb]. It's in early alpha stage. Right now, it shows available formulae and installed formulae only.
+HopShop is a GUI client for [Homebrew][hb]. It's in early alpha stage. Right now, it shows available formulae and installed formulae only. It's early alpha, and startup is a problem that will be fixed soon (it's awfully slow to start).
 
 It's written in Objective-C and is compiled for Snow Leopard or later. It eventually might get bumped up to Lion-only, but not before my work Mac is upgraded to Lion (or Mountain Lion).
 
@@ -16,7 +16,6 @@ Not a lot is set in stone. I don't know if there should be a toolbar, or the lit
 * Colorful info panel that's easier to read (formula name in bold, Caveats highlighted, blank lines between multiple selections, etc)
 * Maybe search for installed formulae as well--not sure how necessary that is
 * Install/uninstall/update/upgrade
-* A cool icon. Definitely.
 
 ## Contributing
 

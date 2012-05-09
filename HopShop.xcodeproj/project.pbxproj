@@ -24,6 +24,7 @@
 		C78F359C1550767800834DE2 /* HopShopAppDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78F359B1550767800834DE2 /* HopShopAppDelegateTests.m */; };
 		C78F35A41550A96C00834DE2 /* Brew.m in Sources */ = {isa = PBXBuildFile; fileRef = C78F35A31550A96C00834DE2 /* Brew.m */; };
 		C78F35A81550A9DE00834DE2 /* BrewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78F35A71550A9DE00834DE2 /* BrewTests.m */; };
+		C7AA77B3155A82BD00F0016C /* HopShop.icns in Resources */ = {isa = PBXBuildFile; fileRef = C7AA77B2155A82BD00F0016C /* HopShop.icns */; };
 		C7D39EC61555D09500D603A7 /* Formula.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D39EC51555D09500D603A7 /* Formula.m */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		C78F35A31550A96C00834DE2 /* Brew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Brew.m; sourceTree = "<group>"; };
 		C78F35A61550A9DE00834DE2 /* BrewTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrewTests.h; sourceTree = "<group>"; };
 		C78F35A71550A9DE00834DE2 /* BrewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrewTests.m; sourceTree = "<group>"; };
+		C7AA77B2155A82BD00F0016C /* HopShop.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = HopShop.icns; sourceTree = "<group>"; };
 		C7D39EC41555D09500D603A7 /* Formula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Formula.h; sourceTree = "<group>"; };
 		C7D39EC51555D09500D603A7 /* Formula.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Formula.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +114,7 @@
 		C78F3550154F73EA00834DE2 = {
 			isa = PBXGroup;
 			children = (
+				C7AA77B2155A82BD00F0016C /* HopShop.icns */,
 				C78F3565154F73EA00834DE2 /* HopShop */,
 				C78F3582154F73EA00834DE2 /* HopShopTests */,
 				C78F355E154F73EA00834DE2 /* Frameworks */,
@@ -292,6 +295,7 @@
 				C78F356A154F73EA00834DE2 /* InfoPlist.strings in Resources */,
 				C78F3570154F73EA00834DE2 /* Credits.rtf in Resources */,
 				C78F3576154F73EA00834DE2 /* MainMenu.xib in Resources */,
+				C7AA77B3155A82BD00F0016C /* HopShop.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +418,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -435,7 +439,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 			};
 			name = Release;
