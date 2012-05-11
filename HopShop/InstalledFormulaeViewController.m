@@ -19,15 +19,18 @@
 @synthesize tableView;
 @synthesize arrayController;
 @synthesize installedFormulae;
+@synthesize loading;
 
 - (void)awakeFromNib
 {
+  loading = YES;
   self.installedFormulae = [NSMutableArray array];
   [self updateInstalledFormulae];
 }
 
 - (void)updateInstalledFormulae
 {
+  loading = YES;
   Brew *brew = [[Brew alloc] initWithDelegate:self];
   [brew list:nil];
 }
@@ -45,22 +48,27 @@
   }
   [arrayController addObjects:tempArray];
   [self.tableView deselectAll:self];
+  [arrayController removeSelectedObjects:[arrayController selectedObjects]];
+  loading = NO;
 }
 
 #pragma mark - NSTableViewDelegate methods
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification 
 {
-  HopShopAppDelegate *appDelegate = [HopShopAppDelegate delegate];
-  [appDelegate clearOutput];
-  NSArray *selectedFormulae = [arrayController selectedObjects];
-  if (selectedFormulae.count > 0) 
+  if (!loading)
   {
-    for (Formula *formula in selectedFormulae)
+    HopShopAppDelegate *appDelegate = [HopShopAppDelegate delegate];
+    [appDelegate clearOutput];
+    NSArray *selectedFormulae = [arrayController selectedObjects];
+    if (selectedFormulae.count > 0) 
     {
-      [appDelegate appendToOutput:[NSString stringWithFormat:@"%@ %@\n", formula.name, formula.version]];
-      [appDelegate appendToOutput:formula.info];
-      [appDelegate appendToOutput:@"\n"]; 
+      for (Formula *formula in selectedFormulae)
+      {
+        [appDelegate appendToOutput:[NSString stringWithFormat:@"%@ %@\n", formula.name, formula.version]];
+        [appDelegate appendToOutput:formula.info];
+        [appDelegate appendToOutput:@"\n"]; 
+      }
     }
   }
 }

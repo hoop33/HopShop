@@ -22,11 +22,14 @@
 @synthesize arrayController;
 @synthesize searchField;
 @synthesize availableFormulae;
+@synthesize loading;
 
 NSPredicate *formulaePredicate;
 
 - (void)awakeFromNib
 {
+  loading = YES;
+  
   // Set up search
   formulaePredicate = [NSPredicate predicateWithFormat:@"name beginswith[cd] $searchString"];
   
@@ -44,6 +47,7 @@ NSPredicate *formulaePredicate;
 
 - (void)updateAvailableFormulae
 {
+  loading = YES;
   Brew *brew = [[Brew alloc] initWithDelegate:self];
   [brew search:nil];
 }
@@ -62,6 +66,8 @@ NSPredicate *formulaePredicate;
   NSData *formulaeData = [NSKeyedArchiver archivedDataWithRootObject:[arrayController arrangedObjects]];
   [formulaeData writeToFile:[[[HopShopAppDelegate delegate] pathForAppData] stringByAppendingPathComponent:kAvailableFormulaeFile] atomically:YES];
   [self.tableView deselectAll:self];
+  [arrayController removeSelectedObjects:[arrayController selectedObjects]];
+  loading = NO;
 }
 
 #pragma mark - Action methods
@@ -81,16 +87,19 @@ NSPredicate *formulaePredicate;
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification 
 {
-  HopShopAppDelegate *appDelegate = [HopShopAppDelegate delegate];
-  [appDelegate clearOutput];
-  NSArray *selectedFormulae = [arrayController selectedObjects];
-  if (selectedFormulae.count > 0) 
+  if (!loading)
   {
-    for (Formula *formula in selectedFormulae)
+    HopShopAppDelegate *appDelegate = [HopShopAppDelegate delegate];
+    [appDelegate clearOutput];
+    NSArray *selectedFormulae = [arrayController selectedObjects];
+    if (selectedFormulae.count > 0) 
     {
-      [appDelegate appendToOutput:[NSString stringWithFormat:@"%@ %@\n", formula.name, formula.version]];
-      [appDelegate appendToOutput:formula.info];
-      [appDelegate appendToOutput:@"\n"]; 
+      for (Formula *formula in selectedFormulae)
+      {
+        [appDelegate appendToOutput:[NSString stringWithFormat:@"%@ %@\n", formula.name, formula.version]];
+        [appDelegate appendToOutput:formula.info];
+        [appDelegate appendToOutput:@"\n"]; 
+      }
     }
   }
 }

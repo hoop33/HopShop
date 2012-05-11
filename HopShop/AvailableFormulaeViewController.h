@@ -15,6 +15,7 @@
 @property (strong) IBOutlet NSArrayController *arrayController;
 @property (strong) IBOutlet NSSearchField *searchField;
 @property (strong) NSMutableArray *availableFormulae;
+@property (assign) BOOL loading;
 
 - (IBAction)updateFilter:(id)sender;
 

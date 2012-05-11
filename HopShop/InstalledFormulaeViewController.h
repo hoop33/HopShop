@@ -14,5 +14,6 @@
 @property (strong) IBOutlet NSTableView *tableView;
 @property (strong) IBOutlet NSArrayController *arrayController;
 @property (strong) NSMutableArray *installedFormulae;
+@property (assign) BOOL loading;
 
 @end
