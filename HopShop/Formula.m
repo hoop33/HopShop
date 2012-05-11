@@ -15,8 +15,8 @@
 @implementation Formula
 
 @synthesize name = _name;
-@synthesize version = _version;
 @synthesize info = _info;
+@synthesize version = _version;
 @synthesize installed = _installed;
 @synthesize outdated = _outdated;
 
@@ -32,7 +32,6 @@ static NSString *KeyOutdated = @"outdated";
   if (self != nil)
   {
     self.name = name_;
-    [self loadBrewInfo];
   }
   return self;
 }
@@ -42,22 +41,36 @@ static NSString *KeyOutdated = @"outdated";
   self = [super init];
   if (self != nil) 
   {
-    self.name = [decoder decodeObjectForKey:KeyName];
-    self.version = [decoder decodeObjectForKey:KeyVersion];
-    self.info = [decoder decodeObjectForKey:KeyInfo];
-    self.installed = [[decoder decodeObjectForKey:KeyInstalled] boolValue];
-    self.outdated = [[decoder decodeObjectForKey:KeyOutdated] boolValue];
+    _name = [decoder decodeObjectForKey:KeyName];
+    _version = [decoder decodeObjectForKey:KeyVersion];
+    _info = [decoder decodeObjectForKey:KeyInfo];
+    _installed = [[decoder decodeObjectForKey:KeyInstalled] boolValue];
+    _outdated = [[decoder decodeObjectForKey:KeyOutdated] boolValue];
   }
   return self;
 }   
 
 - (void)encodeWithCoder:(NSCoder *)encoder 
 {
-  [encoder encodeObject:self.name forKey:KeyName];
-  [encoder encodeObject:self.version forKey:KeyVersion];
-  [encoder encodeObject:self.info forKey:KeyInfo];
+  [encoder encodeObject:_name forKey:KeyName];
+  [encoder encodeObject:_version forKey:KeyVersion];
+  [encoder encodeObject:_info forKey:KeyInfo];
   [encoder encodeObject:[NSNumber numberWithBool:self.installed] forKey:KeyInstalled];
   [encoder encodeObject:[NSNumber numberWithBool:self.outdated] forKey:KeyOutdated];
+}
+
+- (NSString *)info
+{
+  if (_info == nil)
+  {
+    [self loadBrewInfo];
+  }
+  return _info;
+}
+
+- (void)setInfo:(NSString *)info
+{
+  _info = info;
 }
 
 - (void)loadBrewInfo
@@ -80,6 +93,5 @@ static NSString *KeyOutdated = @"outdated";
     }
   }
 }
-
 
 @end
