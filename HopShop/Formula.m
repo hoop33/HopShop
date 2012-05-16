@@ -82,7 +82,7 @@ static NSString *KeyOutdated = @"outdated";
 
 - (NSString *)description
 {
-  return [NSString stringWithFormat:@"%@ %@\n%@\n", self.name, (self.version == nil ? @"" : self.version), self.info];
+  return [NSString stringWithFormat:@"%@ %@\n%@\n", self.name, (self.version == nil ? @"" : self.version), (self.info == nil ? @"" : self.info)];
 }
 
 #pragma mark - BrewDelegate methods
