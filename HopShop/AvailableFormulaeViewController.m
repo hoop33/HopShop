@@ -8,6 +8,7 @@
 
 #import "AvailableFormulaeViewController.h"
 #import "HopShopAppDelegate.h"
+#import "HopShopConstants.h"
 #import "Formula.h"
 
 #define kAvailableFormulaeFile @"available_formulae.plist"
@@ -89,17 +90,10 @@ NSPredicate *formulaePredicate;
 {
   if (!loading)
   {
-    HopShopAppDelegate *appDelegate = [HopShopAppDelegate delegate];
-    [appDelegate clearOutput];
-    NSArray *selectedFormulae = [arrayController selectedObjects];
-    if (selectedFormulae.count > 0) 
+    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationClearOutput object:nil];
+    if ([[arrayController selectedObjects] count] > 0)
     {
-      for (Formula *formula in selectedFormulae)
-      {
-        [appDelegate appendToOutput:[NSString stringWithFormat:@"%@ %@\n", formula.name, formula.version]];
-        [appDelegate appendToOutput:formula.info];
-        [appDelegate appendToOutput:@"\n"]; 
-      }
+      [[NSNotificationCenter defaultCenter] postNotificationName:NotificationFormulaeSelected object:[arrayController selectedObjects]];
     }
   }
 }

@@ -19,7 +19,5 @@
 
 - (void)showError:(NSString *)errorMessage;
 - (NSString *)pathForAppData;
-- (void)clearOutput;
-- (void)appendToOutput:(NSString *)text;
 
 @end

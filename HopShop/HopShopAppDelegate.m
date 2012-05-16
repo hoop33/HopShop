@@ -43,20 +43,4 @@
   
 }
 
-- (void)clearOutput 
-{
-  if (self.outputWindowViewController != nil)
-  {
-    [self.outputWindowViewController clear];
-  }
-}
-
-- (void)appendToOutput:(NSString *)text
-{
-  if (self.outputWindowViewController != nil)
-  {
-    [self.outputWindowViewController append:text];
-  }
-}
-
 @end

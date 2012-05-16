@@ -7,16 +7,30 @@
 //
 
 #import "OutputWindowViewController.h"
+#import "HopShopConstants.h"
+#import "Formula.h"
 
 @interface OutputWindowViewController ()
-
+- (void)clearOutput:(NSNotification *)notification;
+- (void)formulaInfoReceived:(NSNotification *)notification;
+- (void)formulaeSelected:(NSNotification *)notification;
+- (void)refreshViewWithFormulae;
 @end
 
 @implementation OutputWindowViewController
 
 @synthesize outputView;
 
-- (void)clear
+NSArray *formulae;
+
+- (void)awakeFromNib
+{
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clearOutput:) name:NotificationClearOutput object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(formulaeSelected:) name:NotificationFormulaeSelected object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(formulaInfoReceived:) name:NotificationInfoReceived object:nil];
+}
+
+- (void)clearOutput:(NSNotification *)notification
 {
   [self.outputView setString:@""];
 }
@@ -27,6 +41,29 @@
   {
     NSString *output = [self.outputView string];
     [self.outputView setString:[output stringByAppendingString:text]];
+  }
+}
+
+- (void)formulaInfoReceived:(NSNotification *)notification
+{
+  [self refreshViewWithFormulae];
+}
+
+- (void)formulaeSelected:(NSNotification *)notification
+{
+  formulae = [notification.object copy];
+  [self refreshViewWithFormulae];
+}
+
+- (void)refreshViewWithFormulae
+{
+  if (outputView != nil && formulae != nil)
+  {
+    [self clearOutput:nil];
+    for (Formula *formula in formulae)
+    {
+      [self append:[formula description]];
+    }
   }
 }
 

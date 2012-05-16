@@ -12,7 +12,6 @@
 
 @property (strong) IBOutlet NSTextView *outputView;
 
-- (void)clear;
 - (void)append:(NSString *)text;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "Formula.h"
+#import "HopShopConstants.h"
 
 @interface Formula (private)
 - (void)loadBrewInfo;
@@ -79,6 +80,11 @@ static NSString *KeyOutdated = @"outdated";
   [brew info:[NSArray arrayWithObject:self.name]];
 }
 
+- (NSString *)description
+{
+  return [NSString stringWithFormat:@"%@ %@\n%@\n", self.name, (self.version == nil ? @"" : self.version), self.info];
+}
+
 #pragma mark - BrewDelegate methods
 
 - (void)infoDidComplete:(NSString *)output
@@ -92,6 +98,7 @@ static NSString *KeyOutdated = @"outdated";
       self.version = [[[output substringToIndex:range.location] componentsSeparatedByString:@" "] lastObject];
     }
   }
+  [[NSNotificationCenter defaultCenter] postNotificationName:NotificationInfoReceived object:[NSArray arrayWithObject:self]];
 }
 
 @end

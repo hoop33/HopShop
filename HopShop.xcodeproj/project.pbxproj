@@ -11,6 +11,7 @@
 		C74875C71554862A00253576 /* InstalledFormulaeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C74875C61554862A00253576 /* InstalledFormulaeViewController.m */; };
 		C74875CB1555188E00253576 /* AvailableFormulaeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C74875CA1555188E00253576 /* AvailableFormulaeViewController.m */; };
 		C74875CE1555236600253576 /* OutputWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C74875CD1555236600253576 /* OutputWindowViewController.m */; };
+		C75742911562BA4D00D038AB /* HopShopConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C75742901562BA4D00D038AB /* HopShopConstants.m */; };
 		C78F3560154F73EA00834DE2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78F355F154F73EA00834DE2 /* Cocoa.framework */; };
 		C78F356A154F73EA00834DE2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C78F3568154F73EA00834DE2 /* InfoPlist.strings */; };
 		C78F356C154F73EA00834DE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C78F356B154F73EA00834DE2 /* main.m */; };
@@ -45,6 +46,8 @@
 		C74875CA1555188E00253576 /* AvailableFormulaeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvailableFormulaeViewController.m; sourceTree = "<group>"; };
 		C74875CC1555236600253576 /* OutputWindowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutputWindowViewController.h; sourceTree = "<group>"; };
 		C74875CD1555236600253576 /* OutputWindowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutputWindowViewController.m; sourceTree = "<group>"; };
+		C757428F1562BA4D00D038AB /* HopShopConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HopShopConstants.h; sourceTree = "<group>"; };
+		C75742901562BA4D00D038AB /* HopShopConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HopShopConstants.m; sourceTree = "<group>"; };
 		C78F355B154F73EA00834DE2 /* HopShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HopShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C78F355F154F73EA00834DE2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C78F3562154F73EA00834DE2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -162,6 +165,8 @@
 				C78F3566154F73EA00834DE2 /* Supporting Files */,
 				C7D39EC41555D09500D603A7 /* Formula.h */,
 				C7D39EC51555D09500D603A7 /* Formula.m */,
+				C757428F1562BA4D00D038AB /* HopShopConstants.h */,
+				C75742901562BA4D00D038AB /* HopShopConstants.m */,
 			);
 			path = HopShop;
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 				C74875CB1555188E00253576 /* AvailableFormulaeViewController.m in Sources */,
 				C74875CE1555236600253576 /* OutputWindowViewController.m in Sources */,
 				C7D39EC61555D09500D603A7 /* Formula.m in Sources */,
+				C75742911562BA4D00D038AB /* HopShopConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
