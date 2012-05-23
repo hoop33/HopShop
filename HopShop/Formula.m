@@ -85,6 +85,29 @@ static NSString *KeyOutdated = @"outdated";
   return [NSString stringWithFormat:@"%@ %@\n%@\n", self.name, (self.version == nil ? @"" : self.version), (self.info == nil ? @"" : self.info)];
 }
 
+- (NSAttributedString *)fancyDescription
+{
+//  NSMutableAttributedString *fancy = [[NSMutableAttributedString alloc] initWithString:self.description];
+  NSMutableAttributedString *fancy = [[NSMutableAttributedString alloc] init];
+  
+  // Add the name
+  [fancy appendAttributedString:[[NSAttributedString alloc] initWithString:self.name attributes:[NSDictionary dictionaryWithObjectsAndKeys:[NSFont boldSystemFontOfSize:18.0f], NSFontAttributeName, [NSColor blueColor], NSForegroundColorAttributeName, nil]]];
+  
+  // Add the version
+  if (self.version != nil)
+  {
+    [fancy appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"\n%@", self.version] attributes:[NSDictionary dictionaryWithObjectsAndKeys:[NSFont systemFontOfSize:12.0], NSFontAttributeName, [NSColor colorWithDeviceRed:0.0f green:0.5f blue:0.0f alpha:1.0f], NSForegroundColorAttributeName, nil]]];
+  }
+  
+  // Add the info
+  if (self.info != nil)
+  {
+    [fancy appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"\n%@\n", self.info] attributes:[NSDictionary dictionaryWithObject:[NSColor darkGrayColor] forKey:NSForegroundColorAttributeName]]];
+  }
+  
+  return fancy;
+}
+
 #pragma mark - BrewDelegate methods
 
 - (void)infoDidComplete:(NSString *)output

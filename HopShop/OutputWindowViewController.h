@@ -13,5 +13,6 @@
 @property (strong) IBOutlet NSTextView *outputView;
 
 - (void)append:(NSString *)text;
+- (void)appendAttributedText:(NSAttributedString *)attributedText;
 
 @end

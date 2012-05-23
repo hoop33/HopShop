@@ -37,10 +37,16 @@ NSArray *formulae;
 
 - (void)append:(NSString *)text
 {
-  if (text != nil)
+  [self appendAttributedText:[[NSAttributedString alloc] initWithString:text]];
+}
+
+- (void)appendAttributedText:(NSAttributedString *)attributedText
+{
+  if (attributedText != nil)
   {
-    NSString *output = [self.outputView string];
-    [self.outputView setString:[output stringByAppendingString:text]];
+    NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithAttributedString:self.outputView.attributedString];
+    [attr appendAttributedString:attributedText];
+    [self.outputView.textStorage setAttributedString:attr];
   }
 }
 
@@ -62,7 +68,7 @@ NSArray *formulae;
     [self clearOutput:nil];
     for (Formula *formula in formulae)
     {
-      [self append:[formula description]];
+      [self appendAttributedText:[formula fancyDescription]];
     }
   }
 }

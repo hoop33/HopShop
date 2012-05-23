@@ -18,5 +18,6 @@
 @property (nonatomic) BOOL outdated;
 
 - (id)initWithName:(NSString *)name;
+- (NSAttributedString *)fancyDescription;
 
 @end
