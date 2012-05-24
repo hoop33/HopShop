@@ -91,18 +91,36 @@ static NSString *KeyOutdated = @"outdated";
   NSMutableAttributedString *fancy = [[NSMutableAttributedString alloc] init];
   
   // Add the name
-  [fancy appendAttributedString:[[NSAttributedString alloc] initWithString:self.name attributes:[NSDictionary dictionaryWithObjectsAndKeys:[NSFont boldSystemFontOfSize:18.0f], NSFontAttributeName, [NSColor blueColor], NSForegroundColorAttributeName, nil]]];
+  [fancy appendAttributedString:[[NSAttributedString alloc] initWithString:self.name attributes:[NSDictionary dictionaryWithObjectsAndKeys:[NSFont boldSystemFontOfSize:18.0f], NSFontAttributeName, [NSColor colorWithDeviceRed:0.0f green:0.5f blue:0.0f alpha:1.0f], NSForegroundColorAttributeName, nil]]];
   
   // Add the version
   if (self.version != nil)
   {
-    [fancy appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"\n%@", self.version] attributes:[NSDictionary dictionaryWithObjectsAndKeys:[NSFont systemFontOfSize:12.0], NSFontAttributeName, [NSColor colorWithDeviceRed:0.0f green:0.5f blue:0.0f alpha:1.0f], NSForegroundColorAttributeName, nil]]];
+    [fancy appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"\n%@", self.version] attributes:[NSDictionary dictionaryWithObjectsAndKeys:[NSFont systemFontOfSize:12.0], NSFontAttributeName, [NSColor brownColor], NSForegroundColorAttributeName, nil]]];
   }
   
   // Add the info
   if (self.info != nil)
   {
-    [fancy appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"\n%@\n", self.info] attributes:[NSDictionary dictionaryWithObject:[NSColor darkGrayColor] forKey:NSForegroundColorAttributeName]]];
+    NSMutableAttributedString *fancyInfo = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"\n%@\n", self.info]];
+    
+    // Detect the URLs
+    int index = 1; // Skip the leading newline
+    for (NSString *word in [self.info componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]])
+    {
+      if ([word hasPrefix:@"http"])
+      {
+        [fancyInfo addAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                  [NSColor blueColor], NSForegroundColorAttributeName,
+                                  [NSNumber numberWithInt:NSSingleUnderlineStyle], NSUnderlineStyleAttributeName, 
+                                  word, NSLinkAttributeName, nil] 
+                           range:NSMakeRange(index, [word length])];
+      }
+      index += [word length] + 1;
+    }
+
+    // Put in output
+    [fancy appendAttributedString:fancyInfo];
   }
   
   return fancy;
