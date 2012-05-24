@@ -21,6 +21,8 @@
 
 #import "HopShopAppDelegate.h"
 #import "OutputWindowViewController.h"
+#import "Brew.h"
+#import "HopShopConstants.h"
 
 @implementation HopShopAppDelegate
 
@@ -52,8 +54,24 @@
   return folder;
 }
 
-- (void)showError:(NSString *)errorMessage {
+- (void)showError:(NSString *)errorMessage 
+{
   
+}
+
+#pragma mark - BrewDelegate methods
+
+- (void)updateDidComplete:(NSString *)output
+{
+  [[NSNotificationCenter defaultCenter] postNotificationName:NotificationBrewUpdateCompleted object:output];
+}
+
+#pragma mark - Toolbar Item handlers
+
+- (IBAction)brewUpdate:(id)sender
+{
+  Brew *brew = [[Brew alloc] initWithDelegate:self];
+  [brew update];
 }
 
 @end

@@ -26,6 +26,10 @@
 		C78F35A41550A96C00834DE2 /* Brew.m in Sources */ = {isa = PBXBuildFile; fileRef = C78F35A31550A96C00834DE2 /* Brew.m */; };
 		C78F35A81550A9DE00834DE2 /* BrewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78F35A71550A9DE00834DE2 /* BrewTests.m */; };
 		C7AA77B3155A82BD00F0016C /* HopShop.icns in Resources */ = {isa = PBXBuildFile; fileRef = C7AA77B2155A82BD00F0016C /* HopShop.icns */; };
+		C7C6152D156DCECD00EB2CD5 /* install.png in Resources */ = {isa = PBXBuildFile; fileRef = C7C6152B156DCECD00EB2CD5 /* install.png */; };
+		C7C6152E156DCECD00EB2CD5 /* uninstall.png in Resources */ = {isa = PBXBuildFile; fileRef = C7C6152C156DCECD00EB2CD5 /* uninstall.png */; };
+		C7C61530156DCF4A00EB2CD5 /* update.png in Resources */ = {isa = PBXBuildFile; fileRef = C7C6152F156DCF4A00EB2CD5 /* update.png */; };
+		C7C61532156DD19800EB2CD5 /* upgrade.png in Resources */ = {isa = PBXBuildFile; fileRef = C7C61531156DD19800EB2CD5 /* upgrade.png */; };
 		C7D39EC61555D09500D603A7 /* Formula.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D39EC51555D09500D603A7 /* Formula.m */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +80,10 @@
 		C78F35A61550A9DE00834DE2 /* BrewTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrewTests.h; sourceTree = "<group>"; };
 		C78F35A71550A9DE00834DE2 /* BrewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrewTests.m; sourceTree = "<group>"; };
 		C7AA77B2155A82BD00F0016C /* HopShop.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = HopShop.icns; sourceTree = "<group>"; };
+		C7C6152B156DCECD00EB2CD5 /* install.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = install.png; sourceTree = "<group>"; };
+		C7C6152C156DCECD00EB2CD5 /* uninstall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uninstall.png; sourceTree = "<group>"; };
+		C7C6152F156DCF4A00EB2CD5 /* update.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = update.png; sourceTree = "<group>"; };
+		C7C61531156DD19800EB2CD5 /* upgrade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upgrade.png; sourceTree = "<group>"; };
 		C7D39EC41555D09500D603A7 /* Formula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Formula.h; sourceTree = "<group>"; };
 		C7D39EC51555D09500D603A7 /* Formula.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Formula.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +125,7 @@
 		C78F3550154F73EA00834DE2 = {
 			isa = PBXGroup;
 			children = (
+				C7C6151B156DCDD700EB2CD5 /* Images */,
 				C7AA77B2155A82BD00F0016C /* HopShop.icns */,
 				C78F3565154F73EA00834DE2 /* HopShop */,
 				C78F3582154F73EA00834DE2 /* HopShopTests */,
@@ -225,6 +234,17 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
+		C7C6151B156DCDD700EB2CD5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C7C61531156DD19800EB2CD5 /* upgrade.png */,
+				C7C6152F156DCF4A00EB2CD5 /* update.png */,
+				C7C6152B156DCECD00EB2CD5 /* install.png */,
+				C7C6152C156DCECD00EB2CD5 /* uninstall.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -301,6 +321,10 @@
 				C78F3570154F73EA00834DE2 /* Credits.rtf in Resources */,
 				C78F3576154F73EA00834DE2 /* MainMenu.xib in Resources */,
 				C7AA77B3155A82BD00F0016C /* HopShop.icns in Resources */,
+				C7C6152D156DCECD00EB2CD5 /* install.png in Resources */,
+				C7C6152E156DCECD00EB2CD5 /* uninstall.png in Resources */,
+				C7C61530156DCF4A00EB2CD5 /* update.png in Resources */,
+				C7C61532156DD19800EB2CD5 /* upgrade.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

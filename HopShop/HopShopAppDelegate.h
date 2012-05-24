@@ -20,16 +20,18 @@
 // SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #import <Cocoa/Cocoa.h>
+#import "Brew.h"
 
 @class OutputWindowViewController;
 
-@interface HopShopAppDelegate : NSObject <NSApplicationDelegate>
+@interface HopShopAppDelegate : NSObject <NSApplicationDelegate, BrewDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 @property (assign) IBOutlet OutputWindowViewController *outputWindowViewController;
 
 + (HopShopAppDelegate *)delegate;
 
+- (IBAction)brewUpdate:(id)sender;
 - (void)showError:(NSString *)errorMessage;
 - (NSString *)pathForAppData;
 

@@ -23,3 +23,4 @@
 extern NSString * const NotificationClearOutput;
 extern NSString * const NotificationInfoReceived;
 extern NSString * const NotificationFormulaeSelected;
+extern NSString * const NotificationBrewUpdateCompleted;

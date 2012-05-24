@@ -27,6 +27,7 @@
 - (void)clearOutput:(NSNotification *)notification;
 - (void)formulaInfoReceived:(NSNotification *)notification;
 - (void)formulaeSelected:(NSNotification *)notification;
+- (void)brewUpdateCompleted:(NSNotification *)notification;
 - (void)refreshViewWithFormulae;
 @end
 
@@ -41,6 +42,7 @@ NSArray *formulae;
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clearOutput:) name:NotificationClearOutput object:nil];
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(formulaeSelected:) name:NotificationFormulaeSelected object:nil];
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(formulaInfoReceived:) name:NotificationInfoReceived object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(brewUpdateCompleted:) name:NotificationBrewUpdateCompleted object:nil];
 }
 
 - (void)clearOutput:(NSNotification *)notification
@@ -72,6 +74,15 @@ NSArray *formulae;
 {
   formulae = [notification.object copy];
   [self refreshViewWithFormulae];
+}
+
+- (void)brewUpdateCompleted:(NSNotification *)notification
+{
+  if (outputView != nil)
+  {
+    [self clearOutput:nil];
+    [self append:[notification.object copy]];
+  }
 }
 
 - (void)refreshViewWithFormulae

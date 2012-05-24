@@ -170,6 +170,12 @@ static NSDictionary *operations;
         [self.delegate infoDidComplete:currentOutput];
       }
       break;
+    case BrewOperationUpdate:
+      if (self.delegate != nil && [self.delegate respondsToSelector:@selector(updateDidComplete:)])
+      {
+        [self.delegate updateDidComplete:currentOutput];
+      }
+      break;
     default:
       break;
   }
