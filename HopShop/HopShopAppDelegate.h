@@ -27,7 +27,7 @@
 @interface HopShopAppDelegate : NSObject <NSApplicationDelegate, BrewDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
-@property (assign) IBOutlet OutputWindowViewController *outputWindowViewController;
+@property (assign) IBOutlet NSToolbarItem *updateItem;
 
 + (HopShopAppDelegate *)delegate;
 

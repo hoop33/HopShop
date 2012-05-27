@@ -25,9 +25,10 @@
 
 @interface OutputWindowViewController ()
 - (void)clearOutput:(NSNotification *)notification;
+- (void)outputReceived:(NSNotification *)notification;
 - (void)formulaInfoReceived:(NSNotification *)notification;
 - (void)formulaeSelected:(NSNotification *)notification;
-- (void)brewUpdateCompleted:(NSNotification *)notification;
+- (void)updateCompleted:(NSNotification *)notification;
 - (void)refreshViewWithFormulae;
 @end
 
@@ -42,12 +43,18 @@ NSArray *formulae;
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clearOutput:) name:NotificationClearOutput object:nil];
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(formulaeSelected:) name:NotificationFormulaeSelected object:nil];
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(formulaInfoReceived:) name:NotificationInfoReceived object:nil];
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(brewUpdateCompleted:) name:NotificationBrewUpdateCompleted object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateCompleted:) name:NotificationUpdateCompleted object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(outputReceived:) name:NotificationOutputReceived object:nil];
 }
 
 - (void)clearOutput:(NSNotification *)notification
 {
   [self.outputView setString:@""];
+}
+
+- (void)outputReceived:(NSNotification *)notification
+{
+  [self append:notification.object];
 }
 
 - (void)append:(NSString *)text
@@ -76,7 +83,7 @@ NSArray *formulae;
   [self refreshViewWithFormulae];
 }
 
-- (void)brewUpdateCompleted:(NSNotification *)notification
+- (void)updateCompleted:(NSNotification *)notification
 {
   if (outputView != nil)
   {

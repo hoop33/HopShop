@@ -27,7 +27,7 @@
 @implementation HopShopAppDelegate
 
 @synthesize window = _window;
-@synthesize outputWindowViewController = _outputWindowViewController;
+@synthesize updateItem = _updateItem;
 
 + (HopShopAppDelegate *)delegate
 {
@@ -61,15 +61,23 @@
 
 #pragma mark - BrewDelegate methods
 
+- (void)outputReceived:(NSString *)output
+{
+  [[NSNotificationCenter defaultCenter] postNotificationName:NotificationOutputReceived object:output];
+}
+
 - (void)updateDidComplete:(NSString *)output
 {
-  [[NSNotificationCenter defaultCenter] postNotificationName:NotificationBrewUpdateCompleted object:output];
+  [self.updateItem setEnabled:YES];
+  [[NSNotificationCenter defaultCenter] postNotificationName:NotificationUpdateCompleted object:output];
 }
 
 #pragma mark - Toolbar Item handlers
 
 - (IBAction)brewUpdate:(id)sender
 {
+  [[NSNotificationCenter defaultCenter] postNotificationName:NotificationOutputReceived object:@"Updating . . ."];
+  [self.updateItem setEnabled:NO];
   Brew *brew = [[Brew alloc] initWithDelegate:self];
   [brew update];
 }

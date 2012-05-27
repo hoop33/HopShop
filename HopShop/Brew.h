@@ -33,6 +33,7 @@
 - (void)upgradeDidComplete:(NSString *)output;
 - (void)infoDidComplete:(NSString *)output;
 - (void)outdatedDidComplete:(NSArray *)formulae;
+- (void)outputReceived:(NSString *)output;
 - (void)appendOutput:(NSString *)output;
 - (void)processStarted;
 - (void)processFinished:(NSString *)output;

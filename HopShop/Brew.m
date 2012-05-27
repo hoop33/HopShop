@@ -139,6 +139,13 @@ static NSDictionary *operations;
 
 - (void)appendOutput:(NSString *)output
 {
+  if (currentOperation == BrewOperationUpdate) 
+  {
+    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(outputReceived:)])
+    {
+      [self.delegate outputReceived:output];
+    }
+  }
   currentOutput = [currentOutput stringByAppendingString:output];
 }
 

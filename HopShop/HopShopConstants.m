@@ -25,4 +25,5 @@
 NSString * const NotificationClearOutput = @"notification_clear_output";
 NSString * const NotificationInfoReceived = @"notification_info_received";
 NSString * const NotificationFormulaeSelected = @"notification_formulae_selected";
-NSString * const NotificationBrewUpdateCompleted = @"notification_update_completed";
+NSString * const NotificationUpdateCompleted = @"notification_update_completed";
+NSString * const NotificationOutputReceived = @"notification_output_received";
